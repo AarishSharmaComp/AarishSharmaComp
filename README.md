@@ -24,59 +24,59 @@
 <img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/h-stack.svg?v=4" width="100%" alt="Tech stack" />
 
 <div align="center">
-<table>
+<table width="100%">
   <tr>
     <td align="center" valign="top" width="33%">
       <b>Languages</b><br /><br />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="34" alt="C++" title="C++" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="34" alt="Java" title="Java" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="34" alt="Python" title="Python" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="34" alt="JavaScript" title="JavaScript" />
-      <img src="https://skillicons.dev/icons?i=ts" height="34" alt="TypeScript" title="TypeScript" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="36" alt="C++" title="C++" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="36" alt="Java" title="Java" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="36" alt="Python" title="Python" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="36" alt="JavaScript" title="JavaScript" />
+      <img src="https://skillicons.dev/icons?i=ts" height="36" alt="TypeScript" title="TypeScript" />
     </td>
     <td align="center" valign="top" width="33%">
       <b>Backend &amp; databases</b><br /><br />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="34" alt="Spring" title="Spring" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="34" alt="Node.js" title="Node.js" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" height="34" alt="Django" title="Django" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" height="34" alt="FastAPI" title="FastAPI" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original.svg" height="34" alt="Tomcat" title="Tomcat" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="34" alt="PostgreSQL" title="PostgreSQL" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="36" alt="Spring" title="Spring" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="36" alt="Node.js" title="Node.js" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" height="36" alt="Django" title="Django" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" height="36" alt="FastAPI" title="FastAPI" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tomcat/tomcat-original.svg" height="36" alt="Tomcat" title="Tomcat" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="36" alt="PostgreSQL" title="PostgreSQL" />
     </td>
     <td align="center" valign="top" width="33%">
       <b>Frontend</b><br /><br />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="34" alt="HTML5" title="HTML5" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="34" alt="CSS3" title="CSS3" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="34" alt="React" title="React" />
-      <img src="https://skillicons.dev/icons?i=nextjs" height="34" alt="Next.js" title="Next.js" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" height="34" alt="Angular" title="Angular" />
-      <img src="https://skillicons.dev/icons?i=tailwind" height="34" alt="Tailwind CSS" title="Tailwind CSS" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="36" alt="HTML5" title="HTML5" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="36" alt="CSS3" title="CSS3" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="36" alt="React" title="React" />
+      <img src="https://skillicons.dev/icons?i=nextjs" height="36" alt="Next.js" title="Next.js" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" height="36" alt="Angular" title="Angular" />
+      <img src="https://skillicons.dev/icons?i=tailwind" height="36" alt="Tailwind CSS" title="Tailwind CSS" />
     </td>
   </tr>
   <tr>
     <td align="center" valign="top" width="33%">
       <b>Data &amp; ML</b><br /><br />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" height="34" alt="NumPy" title="NumPy" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" height="34" alt="pandas" title="pandas" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" height="34" alt="TensorFlow" title="TensorFlow" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" height="34" alt="OpenCV" title="OpenCV" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original.svg" height="34" alt="Kaggle" title="Kaggle" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" height="36" alt="NumPy" title="NumPy" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" height="36" alt="pandas" title="pandas" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" height="36" alt="TensorFlow" title="TensorFlow" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" height="36" alt="OpenCV" title="OpenCV" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original.svg" height="36" alt="Kaggle" title="Kaggle" />
     </td>
     <td align="center" valign="top" width="33%">
       <b>DevOps &amp; cloud</b><br /><br />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="34" alt="Docker" title="Docker" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="34" alt="Kubernetes" title="Kubernetes" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" height="34" alt="Terraform" title="Terraform" />
-      <img src="https://skillicons.dev/icons?i=aws" height="34" alt="AWS" title="AWS" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" height="34" alt="Nginx" title="Nginx" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="36" alt="Docker" title="Docker" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="36" alt="Kubernetes" title="Kubernetes" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" height="36" alt="Terraform" title="Terraform" />
+      <img src="https://skillicons.dev/icons?i=aws" height="36" alt="AWS" title="AWS" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" height="36" alt="Nginx" title="Nginx" />
     </td>
     <td align="center" valign="top" width="33%">
       <b>Tools</b><br /><br />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="34" alt="Git" title="Git" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" height="34" alt="IntelliJ IDEA" title="IntelliJ IDEA" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg" height="34" alt="JetBrains" title="JetBrains" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytest/pytest-original.svg" height="34" alt="pytest" title="pytest" />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="34" alt="Figma" title="Figma" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="36" alt="Git" title="Git" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" height="36" alt="IntelliJ IDEA" title="IntelliJ IDEA" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg" height="36" alt="JetBrains" title="JetBrains" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytest/pytest-original.svg" height="36" alt="pytest" title="pytest" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="36" alt="Figma" title="Figma" />
     </td>
   </tr>
 </table>
