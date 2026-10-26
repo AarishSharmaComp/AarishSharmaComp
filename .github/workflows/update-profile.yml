@@ -1,0 +1,36 @@
+name: Update profile
+
+# The one entry point. Builds every image the README uses, in parallel:
+#   profile-assets.yml -> assets-output branch  (banner, about card, headings, footer)
+#   trophy.yml         -> trophy-output branch  (trophy card)
+#   arcade.yml         -> pacman-output branch  (Galaga contribution graph)
+on:
+  schedule:
+    - cron: "0 */12 * * *" # every 12 hours, on the hour
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - .github/workflows/**
+
+# Only one refresh at a time.
+concurrency:
+  group: update-profile
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  assets:
+    uses: ./.github/workflows/profile-assets.yml
+
+  trophy:
+    uses: ./.github/workflows/trophy.yml
+    secrets: inherit
+
+  arcade:
+    uses: ./.github/workflows/arcade.yml
+    secrets: inherit
