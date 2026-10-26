@@ -31,29 +31,23 @@ jobs:
           # ---------------- header ----------------
           W, H = 1000, 320
           roles = ["Java full-stack developer", "Learning DevOps, one pipeline at a time", "Solving DSA problems in C++"]
-          CH = 15.6          # char width at 26px mono
-          X0 = 60
-          SLOT, TYPE, HOLD = 4.0, 1.4, 3.6   # seconds
+          SLOT, HOLD, FADE = 4.0, 3.4, 0.4
           TOTAL = SLOT * len(roles)
-          pts = [(0.0, X0)]
           role_svg = ""
           for i, r in enumerate(roles):
-              wd = len(r) * CH
-              a = i * SLOT / TOTAL
-              b = (i * SLOT + TYPE) / TOTAL
-              c = (i * SLOT + HOLD) / TOTAL
-              d = (i * SLOT + HOLD + 0.3) / TOTAL
-              kt = f"0;{a:.4f};{b:.4f};{c:.4f};{d:.4f};1"
-              vals = f"0;0;{wd:.1f};{wd:.1f};0;0"
+              st = i * SLOT
+              if i == 0:
+                  kt = f"0;{HOLD/TOTAL:.4f};{(HOLD+FADE)/TOTAL:.4f};1"
+                  vals = "1;1;0;0"
+                  base = 1
+              else:
+                  kt = f"0;{st/TOTAL:.4f};{(st+FADE)/TOTAL:.4f};{(st+HOLD)/TOTAL:.4f};{(st+HOLD+FADE)/TOTAL:.4f};1"
+                  vals = "0;0;1;1;0;0"
+                  base = 0
               role_svg += f'''
-            <clipPath id="c{i}"><rect x="{X0}" y="160" height="40" width="0">
-              <animate attributeName="width" values="{vals}" keyTimes="{kt}" dur="{TOTAL}s" repeatCount="indefinite"/></rect></clipPath>
-            <text x="{X0}" y="188" font-family="{MONO}" font-size="26" fill="{TEXT}" textLength="{wd:.1f}" lengthAdjust="spacingAndGlyphs" clip-path="url(#c{i})">{r}</text>'''
-              pts += [(a, X0), (b, X0 + wd), (c, X0 + wd), (d, X0)]
-          pts.append((1.0, X0))
-          # dedupe monotonic times
-          cur_kt = ";".join(f"{t:.4f}" for t, _ in pts)
-          cur_x = ";".join(f"{x:.1f}" for _, x in pts)
+            <text x="60" y="188" font-family="{MONO}" font-size="26" fill="{TEXT}" opacity="{base}"><tspan fill="{CYAN}">&gt; </tspan>{r}
+              <animate attributeName="opacity" values="{vals}" keyTimes="{kt}" dur="{TOTAL}s" repeatCount="indefinite"/></text>'''
+          X0 = 60
 
           nodes = [("commit", 60), ("build", 280), ("test", 500), ("containerize", 720), ("deploy", 940)]
           node_svg = ""
@@ -86,9 +80,6 @@ jobs:
             <text x="{X0}" y="78" font-family="{MONO}" font-size="16" fill="{MUTED}">// hello, world</text>
             <text x="{X0}" y="142" font-family="{SANS}" font-size="66" font-weight="800" fill="url(#name)" letter-spacing="-1">Aarish Sharma</text>
             {role_svg}
-            <rect y="164" width="12" height="30" fill="{CYAN}">
-              <animate attributeName="x" values="{cur_x}" keyTimes="{cur_kt}" dur="{TOTAL}s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect>
 
             <line x1="60" y1="262" x2="940" y2="262" stroke="{MUTED}" stroke-opacity=".35" stroke-width="2" stroke-dasharray="4 6"/>
             <line x1="60" y1="262" x2="940" y2="262" stroke="url(#rail)" stroke-width="2" stroke-dasharray="880" stroke-dashoffset="880">
