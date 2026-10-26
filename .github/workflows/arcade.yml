@@ -1,41 +1,28 @@
-name: Generate trophy card
+name: Arcade contribution graph (Galaga)
 
+# Reusable: called by update-profile.yml. Can also be run by hand from the Actions tab.
 on:
-  schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
-
+  workflow_call:
   workflow_dispatch:
 
-  push:
-    branches:
-      - main
-
 jobs:
-  generate:
+  galaga:
     permissions:
       contents: write
-      actions: read
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 20
 
     steps:
-      - name: generate trophy.svg
-        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+      - name: generate galaga contribution graph
+        uses: abozanona/pacman-contribution-graph@main
         with:
-          username: ${{ github.repository_owner }}
-          file: dist/trophy.svg
-          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
-          theme: darkhub
-          max-rows: 1
-          margin-width: 8
-          margin-height: 8
-          no-background: true
-          no-frame: false
+          github_user_name: ${{ github.repository_owner }}
+          games: "galaga"
 
-      - name: push trophy.svg to the output branch
+      - name: push SVGs to the pacman-output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          target_branch: trophy-output
+          target_branch: pacman-output
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
