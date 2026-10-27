@@ -31,8 +31,23 @@ jobs:
           # ---------------- header ----------------
           W, H = 1000, 320
           X0 = 60
-          role_svg = f'''
-            <text x="60" y="188" font-family="{MONO}" font-size="28" fill="{TEXT}"><tspan fill="{CYAN}">&gt; </tspan>Shipping code, one commit at a time.</text>'''
+          roles = ["Java full-stack developer", "Learning DevOps, one pipeline at a time", "Solving DSA problems in C++", "Shipping code, one commit at a time"]
+          SLOT, HOLD, FADE = 4.0, 3.4, 0.4
+          TOTAL = SLOT * len(roles)
+          role_svg = ""
+          for i, r in enumerate(roles):
+              st = i * SLOT
+              if i == 0:
+                  kt = f"0;{HOLD/TOTAL:.4f};{(HOLD+FADE)/TOTAL:.4f};1"
+                  vals = "1;1;0;0"
+                  base = 1
+              else:
+                  kt = f"0;{st/TOTAL:.4f};{(st+FADE)/TOTAL:.4f};{(st+HOLD)/TOTAL:.4f};{(st+HOLD+FADE)/TOTAL:.4f};1"
+                  vals = "0;0;1;1;0;0"
+                  base = 0
+              role_svg += f'''
+            <text x="60" y="188" font-family="{MONO}" font-size="26" fill="{TEXT}" opacity="{base}"><tspan fill="{CYAN}">&gt; </tspan>{r}
+              <animate attributeName="opacity" values="{vals}" keyTimes="{kt}" dur="{TOTAL}s" repeatCount="indefinite"/></text>'''
 
           nodes = [("commit", 60), ("build", 280), ("test", 500), ("containerize", 720), ("deploy", 940)]
           node_svg = ""
