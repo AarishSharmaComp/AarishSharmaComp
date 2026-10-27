@@ -30,24 +30,9 @@ jobs:
 
           # ---------------- header ----------------
           W, H = 1000, 320
-          roles = ["Java full-stack developer", "Learning DevOps, one pipeline at a time", "Solving DSA problems in C++"]
-          SLOT, HOLD, FADE = 4.0, 3.4, 0.4
-          TOTAL = SLOT * len(roles)
-          role_svg = ""
-          for i, r in enumerate(roles):
-              st = i * SLOT
-              if i == 0:
-                  kt = f"0;{HOLD/TOTAL:.4f};{(HOLD+FADE)/TOTAL:.4f};1"
-                  vals = "1;1;0;0"
-                  base = 1
-              else:
-                  kt = f"0;{st/TOTAL:.4f};{(st+FADE)/TOTAL:.4f};{(st+HOLD)/TOTAL:.4f};{(st+HOLD+FADE)/TOTAL:.4f};1"
-                  vals = "0;0;1;1;0;0"
-                  base = 0
-              role_svg += f'''
-            <text x="60" y="188" font-family="{MONO}" font-size="26" fill="{TEXT}" opacity="{base}"><tspan fill="{CYAN}">&gt; </tspan>{r}
-              <animate attributeName="opacity" values="{vals}" keyTimes="{kt}" dur="{TOTAL}s" repeatCount="indefinite"/></text>'''
           X0 = 60
+          role_svg = f'''
+            <text x="60" y="188" font-family="{MONO}" font-size="28" fill="{TEXT}"><tspan fill="{CYAN}">&gt; </tspan>Shipping code, one commit at a time.</text>'''
 
           nodes = [("commit", 60), ("build", 280), ("test", 500), ("containerize", 720), ("deploy", 940)]
           node_svg = ""
@@ -158,6 +143,57 @@ jobs:
           <text x="500" y="72" text-anchor="middle" font-family="{MONO}" font-size="15" fill="{MUTED}">thanks for stopping by. say hi, open an issue, or fork something.</text>
           </svg>'''
           w("footer.svg", footer)
+
+          # ---------------- tech stack grid (icons embedded so the SVG is self-contained) ----------------
+          import base64, urllib.request
+          SI = "https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/%s.svg"
+          DV = "https://raw.githubusercontent.com/devicons/devicon/master/icons/%s.svg"
+          # (label, skill-icons name or None, devicon path fallback, light tile for dark icons)
+          STACK = [
+           ("Languages", [("C++","CPP"),("Java","Java-Dark"),("Python","Python-Dark"),("JavaScript","JavaScript"),("TypeScript","TypeScript")]),
+           ("Backend & databases", [("Spring","Spring-Dark"),("Node.js","NodeJS-Dark"),("Django","Django"),("FastAPI","FastAPI"),("Tomcat",None,"tomcat/tomcat-original"),("PostgreSQL","PostgreSQL-Dark")]),
+           ("Frontend", [("HTML5","HTML"),("CSS3","CSS"),("React","React-Dark"),("Next.js","NextJS-Dark"),("Angular","Angular-Dark"),("Tailwind CSS","TailwindCSS-Dark")]),
+           ("Data & ML", [("NumPy",None,"numpy/numpy-original"),("pandas",None,"pandas/pandas-original",True),("TensorFlow","TensorFlow-Dark"),("OpenCV","OpenCV-Dark"),("Kaggle",None,"kaggle/kaggle-original")]),
+           ("DevOps & cloud", [("Docker","Docker"),("Kubernetes","Kubernetes"),("Terraform","Terraform-Dark"),("AWS","AWS-Dark"),("Nginx","Nginx")]),
+           ("Tools", [("Git","Git"),("IntelliJ IDEA","Idea-Dark"),("JetBrains",None,"jetbrains/jetbrains-original"),("pytest",None,"pytest/pytest-original"),("Figma","Figma-Dark")]),
+          ]
+          def fetch(url):
+              try:
+                  req = urllib.request.Request(url, headers={"User-Agent": "profile-readme-builder"})
+                  return urllib.request.urlopen(req, timeout=20).read()
+              except Exception as e:
+                  print("icon fetch failed:", url, e)
+                  return None
+          def esc(t): return t.replace("&", "&amp;")
+
+          CW, GAP, ICON, ISP, PAD, CH_ = 320, 20, 40, 8, 20, 120
+          ts = ""
+          for idx, (label, items) in enumerate(STACK):
+              cx = (idx % 3) * (CW + GAP); cy = (idx // 3) * (CH_ + GAP)
+              ts += f'<g transform="translate({cx},{cy})">\n'
+              ts += f'  <rect width="{CW}" height="{CH_}" rx="14" fill="{PANEL}" stroke="#ffffff" stroke-opacity=".08"/>\n'
+              ts += f'  <text x="{PAD}" y="{PAD+16}" font-family="{SANS}" font-size="17" font-weight="700" fill="{TEXT}">{esc(label)}</text>\n'
+              for j, it in enumerate(items):
+                  name, si, dv, light = (list(it) + [None, None, False])[:4] if len(it) < 4 else it
+                  x = PAD + j * (ICON + ISP); y = PAD + 40
+                  data = fetch(SI % si) if si else None
+                  tile = None
+                  if data is None and dv:
+                      data = fetch(DV % dv); tile = "#e6edf3" if light else "#1f2740"
+                  if data is None:
+                      ts += f'  <rect x="{x}" y="{y}" width="{ICON}" height="{ICON}" rx="9" fill="#1f2740"/><text x="{x+ICON/2}" y="{y+25}" text-anchor="middle" font-family="{SANS}" font-size="14" font-weight="700" fill="{TEXT}">{esc(name[:2])}</text>\n'
+                      continue
+                  b64 = base64.b64encode(data).decode()
+                  if tile:
+                      ts += f'  <rect x="{x}" y="{y}" width="{ICON}" height="{ICON}" rx="9" fill="{tile}"/>\n'
+                      ts += f'  <image x="{x+7}" y="{y+7}" width="{ICON-14}" height="{ICON-14}" href="data:image/svg+xml;base64,{b64}"><title>{esc(name)}</title></image>\n'
+                  else:
+                      ts += f'  <image x="{x}" y="{y}" width="{ICON}" height="{ICON}" href="data:image/svg+xml;base64,{b64}"><title>{esc(name)}</title></image>\n'
+              ts += '</g>\n'
+          TH = 2 * CH_ + GAP
+          w("tech-stack.svg", f'''<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="{TH}" viewBox="0 0 1000 {TH}" role="img" aria-label="Tech stack: languages, backend, frontend, data and ML, DevOps and cloud, tools">
+          {ts}</svg>''')
+
           print(os.listdir(OUT))
           PY
 
@@ -166,7 +202,7 @@ jobs:
           python3 - <<'PY'
           import glob, xml.dom.minidom as md
           files = sorted(glob.glob("dist/*.svg"))
-          assert len(files) == 7, f"expected 7 SVGs, found {len(files)}"
+          assert len(files) == 8, f"expected 8 SVGs, found {len(files)}"
           for f in files:
               md.parse(f)
           print("OK:", [f.split("/")[-1] for f in files])
