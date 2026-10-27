@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/header.svg?v=4" width="100%" alt="Aarish Sharma, Java full-stack developer learning DevOps" />
+  <img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/header.svg?v=5" width="100%" alt="Aarish Sharma, Java full-stack developer learning DevOps" />
 </div>
 
 <br />
@@ -13,21 +13,21 @@
 
 <br />
 
-<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/h-about.svg?v=4" width="100%" alt="About me" />
+<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/h-about.svg?v=5" width="100%" alt="About me" />
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/about.svg?v=4" width="100%" alt="About Aarish: student developer, Java full-stack, learning DevOps" />
+  <img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/about.svg?v=5" width="100%" alt="About Aarish: student developer, Java full-stack, learning DevOps" />
 </div>
 
 <br />
 
-<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/h-stack.svg?v=4" width="100%" alt="Tech stack" />
+<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/h-stack.svg?v=5" width="100%" alt="Tech stack" />
 
-<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/tech-stack.svg?v=4" width="100%" alt="Tech stack: languages, backend, frontend, data and ML, DevOps and cloud, tools" />
+<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/tech-stack.svg?v=5" width="100%" alt="Tech stack: languages, backend, frontend, data and ML, DevOps and cloud, tools" />
 
 <br />
 
-<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/h-stats.svg?v=4" width="100%" alt="GitHub stats" />
+<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/h-stats.svg?v=5" width="100%" alt="GitHub stats" />
 
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=AarishSharmaComp&locale=en&mode=daily&theme=github-dark&background=0D1117&ring=38BDF8&fire=A78BFA&currStreakNum=E6EDF3&sideNums=E6EDF3&currStreakLabel=38BDF8&sideLabels=8B98B5&dates=8B98B5&stroke=30363D&hide_border=false&border_radius=12" height="160" alt="GitHub streak" />
@@ -37,7 +37,7 @@
 
 <br />
 
-<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/h-activity.svg?v=4" width="100%" alt="Contribution game" />
+<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/h-activity.svg?v=5" width="100%" alt="Contribution game" />
 
 <div align="center">
   <picture>
@@ -47,4 +47,4 @@
   </picture>
 </div>
 
-<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/footer.svg?v=4" width="100%" alt="Thanks for stopping by" />
+<img src="https://raw.githubusercontent.com/AarishSharmaComp/AarishSharmaComp/assets-output/footer.svg?v=5" width="100%" alt="Thanks for stopping by" />
