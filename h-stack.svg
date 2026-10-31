@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="64" viewBox="0 0 1000 64" role="img" aria-label="Tech stack">
+<defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+<linearGradient id="l" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity=".9"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></linearGradient></defs>
+<rect x="0" y="14" width="6" height="36" rx="3" fill="url(#a)"/>
+<text x="22" y="38" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="700" fill="#e6edf3">Tech stack</text>
+<rect x="0" y="61" width="1000" height="2" rx="1" fill="url(#l)" opacity=".7">
+  <animate attributeName="width" from="0" to="1000" dur="1.4s" fill="freeze"/></rect>
+</svg>
